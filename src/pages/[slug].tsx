@@ -12,7 +12,7 @@ export default function Page(data: any) {
     try {
       var qcImgDiv = document.getElementById("qcImg");
 
-      if (1==2 && qcImgDiv) {
+      if (1==2) {
         var insElement = document.createElement("ins");
         insElement.className = "adsbygoogle";
         insElement.style.display = "block";
