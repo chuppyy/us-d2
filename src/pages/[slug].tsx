@@ -11,8 +11,8 @@ export default function Page(data: any) {
   useEffect(() => {
     try {
       var qcImgDiv = document.getElementById("qcImg");
-
-      if (qcImgDiv && 1==2) {
+      let a=false;
+      if (qcImgDiv && a) {
         var insElement = document.createElement("ins");
         insElement.className = "adsbygoogle";
         insElement.style.display = "block";
