@@ -34,8 +34,7 @@ export default function Page(data: any) {
         // Giua bai mgid
         // Chọn thẻ div có ID "qc"
         var qcDiv = document.getElementById("qcmgidgb");
-        if (qcDiv) {          
-
+        if (qcDiv) {  
         // Tạo một div mới để chứa đoạn mã HTML và JavaScript
         var newDiv = document.createElement('div');
         newDiv.innerHTML = '<div data-type="_mgwidget" data-widget-id="1608573"></div>' +
