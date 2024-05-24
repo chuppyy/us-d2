@@ -43,7 +43,6 @@ export default function Page(data: any) {
         qcDiv.appendChild(newDiv);
         }        
       // push ads
-
       var ads = document.getElementsByClassName("adsbygoogle").length;
       console.log("ads",ads);
       for (var i = 0; i < ads; i++) {
