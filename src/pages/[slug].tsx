@@ -93,7 +93,6 @@ export default function Page(data: any) {
           gtag('config', 'G-GQ30CKX99X');
         `}
       </Script>
-
       <Script
   id="adsbygoogle-init"
   strategy="afterInteractive"
