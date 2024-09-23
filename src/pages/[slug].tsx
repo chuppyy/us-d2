@@ -131,25 +131,21 @@ useEffect(() => {
           content={article.summary ? article.summary : article.name}
         />
       </Head>
-      <Script
-        id="gg-1"
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-YSM71MQHG7`}
-      />
+      <Script src={`https://jsc.adskeeper.com/site/952609.js`} async></Script>
+      <Script id="gg-1" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-GQ30CKX99X`} />
       <Script id="gg-2" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-YSM71MQHG7');
+          gtag('config', 'G-GQ30CKX99X');
         `}
       </Script>
       <Script
-        id="adsbygoogle-init"
-        strategy="afterInteractive"
-        crossOrigin="anonymous"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3052636440995168"
-      />
+  id="adsbygoogle-init"
+  strategy="afterInteractive"
+  crossOrigin="anonymous"
+  src= "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3052636440995168"/>
       <main>
       
         <div className="container-flu details">
