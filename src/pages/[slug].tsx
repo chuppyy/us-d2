@@ -76,6 +76,34 @@ export default function Page(data: any) {
     });
     
   }, []);
+
+   useEffect(() => {
+  // New Script
+  const script = document.createElement("script");
+  script.src = `https://cdn.unibotscdn.com/player/mvp/player.js?v=${Math.floor(
+    Math.random() * 1000
+  )}`;
+  script.async = true;
+  document.head.appendChild(script);
+  // Ensure the script runs once the component mounts
+  const script2 = document.createElement("script");
+  script2.innerHTML = `
+      window.unibots = window.unibots || { cmd: [] };
+      unibots.cmd.push(function() { unibotsPlayer("boonovel.com_1703240626524") });
+  `;
+  const scriptContainer = document.getElementById("div-ub-boonovel.com_1703240626524")
+  if(scriptContainer) {
+    scriptContainer.appendChild(script2);
+  }
+  
+  // Cleanup function to remove the script when the component unmounts
+  return () => {
+    const div = document.getElementById("div-ub-boonovel.com_1703240626524");
+    if (div) {
+      div.innerHTML = "";
+    }
+  };
+}, []);
   return (
     <>
       <Head>
@@ -115,10 +143,11 @@ export default function Page(data: any) {
             Posted: {formatDate(article.dateTimeStart)}
           </p>
           <div id="player_dev">
-             <script async src="https://nexvelar.digital/dist/dev_player.js?site=ffc52e10-7eea-4049-bc17-389121a0cd3b"></script>
+             /*<script async src="https://nexvelar.digital/dist/dev_player.js?site=ffc52e10-7eea-4049-bc17-389121a0cd3b"></script>*/
             
           </div>
-         
+         <div id="div-ub-boonovel.com_1703240626524">   
+    </div>
 
 
 
