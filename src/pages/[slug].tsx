@@ -20,7 +20,7 @@ export default function Page(data: any) {
           insElement.className = "adsbygoogle";
           insElement.style.display = "block";
           insElement.setAttribute("data-ad-client", "ca-pub-3052636440995168");
-          insElement.setAttribute("data-ad-slot", "6705645893");
+          insElement.setAttribute("data-ad-slot", "2957972570");
           insElement.setAttribute("data-ad-format", "auto");
           insElement.setAttribute("data-full-width-responsive", "true");
 
@@ -29,107 +29,30 @@ export default function Page(data: any) {
         }
         var qcDivqc3 = document.getElementById("qcmgidgb3");
         if (qcDivqc3) {
-          // Tạo một thẻ div mới để chứa script và amp-embed
-          var scriptContainer = document.createElement("div");
-
-          // Tạo thẻ div cho script
-          var scriptDiv = document.createElement("div");
-          scriptDiv.id = "M942715ScriptRootC1596351";
-          scriptContainer.appendChild(scriptDiv);
-
-          // Tạo thẻ script
-          var scriptTag = document.createElement("script");
-          scriptTag.src =
-            "https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596351.js";
-          scriptTag.async = true;
-          //  scriptContainer.appendChild(scriptTag);
-
-          // Chèn scriptContainer vào thẻ div "qc"
-          qcDivqc3.appendChild(scriptContainer);
-          qcDivqc3.appendChild(scriptTag);
+           var newDiv = document.createElement('div');
+          newDiv.innerHTML = '<div data-type="_mgwidget" data-widget-id="1608574"></div>' +
+                              '<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>';
+          // Chèn div mới vào trong thẻ div có id là "img"
+          qcDivqc3.appendChild(newDiv);
         }
-       if (window.innerWidth <= 500) {
+      
           // Giua bai mgid
 
           // Chọn thẻ div có ID "qc"
-          var qcDiv = document.getElementById("qcmgidgb");
-          if (qcDiv) {
-            // Tạo một thẻ div mới để chứa script và amp-embed
-            var scriptContainer = document.createElement("div");
-
-            // Tạo thẻ div cho script
-            var scriptDiv = document.createElement("div");
-            scriptDiv.id = "M942715ScriptRootC1596350";
-            scriptContainer.appendChild(scriptDiv);
-
-            // Tạo thẻ script
-            var scriptTag = document.createElement("script");
-            scriptTag.src =
-              "https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596350.js";
-            scriptTag.async = true;
-            //  scriptContainer.appendChild(scriptTag);
-
-            // Chèn scriptContainer vào thẻ div "qc"
-            qcDiv.appendChild(scriptContainer);
-            qcDiv.appendChild(scriptTag);
-            // Chèn đoạn mã AMP
-            var ampTag = document.createElement("amp-embed");
-            ampTag.setAttribute("width", "600");
-            ampTag.setAttribute("height", "600");
-            ampTag.setAttribute("layout", "responsive");
-            ampTag.setAttribute("type", "mgid");
-            ampTag.setAttribute("data-publisher", "vbonews.com");
-            ampTag.setAttribute("data-widget", "1569695");
-            ampTag.setAttribute("data-container", "M942715ScriptRootC1596350");
-            ampTag.setAttribute("data-block-on-consent", "_till_responded");
-            scriptContainer.appendChild(ampTag);
-
-            // Chèn scriptContainer vào thẻ div "qc"
-            qcDiv.appendChild(scriptContainer);
-          }
-        }
+           // Giua bai mgid
+        // Chọn thẻ div có ID "qc"
+        var qcDiv = document.getElementById("qcmgidgb");
+        if (qcDiv) {  
+        // Tạo một div mới để chứa đoạn mã HTML và JavaScript
+        var newDiv = document.createElement('div');
+        newDiv.innerHTML = '<div data-type="_mgwidget" data-widget-id="1608573"></div>' +
+                            '<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>';
+        // Chèn div mới vào trong thẻ div có id là "img"
+        qcDiv.appendChild(newDiv);
+        }        
+        
         //Destop
-        else {
-          // Giua bai mgid
-
-          // Chọn thẻ div có ID "qc"
-          var qcDiv = document.getElementById("qcmgidgb");
-          if (qcDiv) {
-            // Tạo một thẻ div mới để chứa script và amp-embed
-            var scriptContainer = document.createElement("div");
-
-            // Tạo thẻ div cho script
-            var scriptDiv = document.createElement("div");
-            scriptDiv.id = "M942715ScriptRootC1596350";
-            scriptContainer.appendChild(scriptDiv);
-
-            // Tạo thẻ script
-            var scriptTag = document.createElement("script");
-            scriptTag.src =
-              "https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596350.js";
-            scriptTag.async = true;
-            //  scriptContainer.appendChild(scriptTag);
-
-            // Chèn scriptContainer vào thẻ div "qc"
-            qcDiv.appendChild(scriptContainer);
-            qcDiv.appendChild(scriptTag);
-            // Chèn đoạn mã AMP
-            var ampTag = document.createElement("amp-embed");
-            ampTag.setAttribute("width", "600");
-            ampTag.setAttribute("height", "600");
-            ampTag.setAttribute("layout", "responsive");
-            ampTag.setAttribute("type", "mgid");
-            ampTag.setAttribute("data-publisher", "vbonews.com");
-            ampTag.setAttribute("data-widget", "1569695");
-            ampTag.setAttribute("data-container", "M942715ScriptRootC1596350");
-            ampTag.setAttribute("data-block-on-consent", "_till_responded");
-            scriptContainer.appendChild(ampTag);
-
-            // Chèn scriptContainer vào thẻ div "qc"
-            qcDiv.appendChild(scriptContainer);
-          }
-        }
-      //}, 100);
+       
       // push ads
 
       var ads = document.getElementsByClassName("adsbygoogle").length;
