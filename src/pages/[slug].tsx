@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Script from "next/script";
 import Head from "next/head";
 const formatDate = (str: string) => {
