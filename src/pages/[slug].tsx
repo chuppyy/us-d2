@@ -5,46 +5,134 @@ const formatDate = (str: string) => {
   const date = new Date(str);
   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 };
+
 import { useEffect } from "react";
+
 export default function Page(data: any) {
   const article = data.data;
+  const [iframeHeight, setIframeHeight] = useState<number | null>(null);
   useEffect(() => {
     try {
-      var qcImgDiv = document.getElementById("qcImg");
-      let a=false;
-      if (qcImgDiv ) {
-        var insElement = document.createElement("ins");
-        insElement.className = "adsbygoogle";
-        insElement.style.display = "block";
-        insElement.setAttribute("data-ad-client", "ca-pub-3052636440995168");
-        insElement.setAttribute("data-ad-slot", "2957972570");
-        insElement.setAttribute("data-ad-format", "auto");
-        insElement.setAttribute("data-full-width-responsive", "true");
-        // Chèn đối tượng ins vào thẻ div
-        qcImgDiv.appendChild(insElement);
-      }
-       var qcDivqc3 = document.getElementById("qcmgidgb3");
-        if(qcDivqc3){
-          var newDiv = document.createElement('div');
-          newDiv.innerHTML = '<div data-type="_mgwidget" data-widget-id="1608574"></div>' +
-                              '<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>';
-          // Chèn div mới vào trong thẻ div có id là "img"
-          qcDivqc3.appendChild(newDiv);
+      //setTimeout(() => {
+        var qcImgDiv = document.getElementById("qcImg");
+        if (qcImgDiv ) {
+          var insElement = document.createElement("ins");
+          insElement.className = "adsbygoogle";
+          insElement.style.display = "block";
+          insElement.setAttribute("data-ad-client", "ca-pub-3052636440995168");
+          insElement.setAttribute("data-ad-slot", "6705645893");
+          insElement.setAttribute("data-ad-format", "auto");
+          insElement.setAttribute("data-full-width-responsive", "true");
+
+          // Chèn đối tượng ins vào thẻ div
+          qcImgDiv.appendChild(insElement);
         }
-        // Giua bai mgid
-        // Chọn thẻ div có ID "qc"
-        var qcDiv = document.getElementById("qcmgidgb");
-        if (qcDiv) {  
-        // Tạo một div mới để chứa đoạn mã HTML và JavaScript
-        var newDiv = document.createElement('div');
-        newDiv.innerHTML = '<div data-type="_mgwidget" data-widget-id="1608573"></div>' +
-                            '<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>';
-        // Chèn div mới vào trong thẻ div có id là "img"
-        qcDiv.appendChild(newDiv);
-        }        
+        var qcDivqc3 = document.getElementById("qcmgidgb3");
+        if (qcDivqc3) {
+          // Tạo một thẻ div mới để chứa script và amp-embed
+          var scriptContainer = document.createElement("div");
+
+          // Tạo thẻ div cho script
+          var scriptDiv = document.createElement("div");
+          scriptDiv.id = "M942715ScriptRootC1596351";
+          scriptContainer.appendChild(scriptDiv);
+
+          // Tạo thẻ script
+          var scriptTag = document.createElement("script");
+          scriptTag.src =
+            "https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596351.js";
+          scriptTag.async = true;
+          //  scriptContainer.appendChild(scriptTag);
+
+          // Chèn scriptContainer vào thẻ div "qc"
+          qcDivqc3.appendChild(scriptContainer);
+          qcDivqc3.appendChild(scriptTag);
+        }
+       if (window.innerWidth <= 500) {
+          // Giua bai mgid
+
+          // Chọn thẻ div có ID "qc"
+          var qcDiv = document.getElementById("qcmgidgb");
+          if (qcDiv) {
+            // Tạo một thẻ div mới để chứa script và amp-embed
+            var scriptContainer = document.createElement("div");
+
+            // Tạo thẻ div cho script
+            var scriptDiv = document.createElement("div");
+            scriptDiv.id = "M942715ScriptRootC1596350";
+            scriptContainer.appendChild(scriptDiv);
+
+            // Tạo thẻ script
+            var scriptTag = document.createElement("script");
+            scriptTag.src =
+              "https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596350.js";
+            scriptTag.async = true;
+            //  scriptContainer.appendChild(scriptTag);
+
+            // Chèn scriptContainer vào thẻ div "qc"
+            qcDiv.appendChild(scriptContainer);
+            qcDiv.appendChild(scriptTag);
+            // Chèn đoạn mã AMP
+            var ampTag = document.createElement("amp-embed");
+            ampTag.setAttribute("width", "600");
+            ampTag.setAttribute("height", "600");
+            ampTag.setAttribute("layout", "responsive");
+            ampTag.setAttribute("type", "mgid");
+            ampTag.setAttribute("data-publisher", "vbonews.com");
+            ampTag.setAttribute("data-widget", "1569695");
+            ampTag.setAttribute("data-container", "M942715ScriptRootC1596350");
+            ampTag.setAttribute("data-block-on-consent", "_till_responded");
+            scriptContainer.appendChild(ampTag);
+
+            // Chèn scriptContainer vào thẻ div "qc"
+            qcDiv.appendChild(scriptContainer);
+          }
+        }
+        //Destop
+        else {
+          // Giua bai mgid
+
+          // Chọn thẻ div có ID "qc"
+          var qcDiv = document.getElementById("qcmgidgb");
+          if (qcDiv) {
+            // Tạo một thẻ div mới để chứa script và amp-embed
+            var scriptContainer = document.createElement("div");
+
+            // Tạo thẻ div cho script
+            var scriptDiv = document.createElement("div");
+            scriptDiv.id = "M942715ScriptRootC1596350";
+            scriptContainer.appendChild(scriptDiv);
+
+            // Tạo thẻ script
+            var scriptTag = document.createElement("script");
+            scriptTag.src =
+              "https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596350.js";
+            scriptTag.async = true;
+            //  scriptContainer.appendChild(scriptTag);
+
+            // Chèn scriptContainer vào thẻ div "qc"
+            qcDiv.appendChild(scriptContainer);
+            qcDiv.appendChild(scriptTag);
+            // Chèn đoạn mã AMP
+            var ampTag = document.createElement("amp-embed");
+            ampTag.setAttribute("width", "600");
+            ampTag.setAttribute("height", "600");
+            ampTag.setAttribute("layout", "responsive");
+            ampTag.setAttribute("type", "mgid");
+            ampTag.setAttribute("data-publisher", "vbonews.com");
+            ampTag.setAttribute("data-widget", "1569695");
+            ampTag.setAttribute("data-container", "M942715ScriptRootC1596350");
+            ampTag.setAttribute("data-block-on-consent", "_till_responded");
+            scriptContainer.appendChild(ampTag);
+
+            // Chèn scriptContainer vào thẻ div "qc"
+            qcDiv.appendChild(scriptContainer);
+          }
+        }
+      //}, 100);
       // push ads
+
       var ads = document.getElementsByClassName("adsbygoogle").length;
-      console.log("ads",ads);
       for (var i = 0; i < ads; i++) {
         ((window as any).adsbygoogle =
           (window as any)?.adsbygoogle || [])?.push({});
@@ -52,7 +140,8 @@ export default function Page(data: any) {
     } catch (err) {
       console.log("err2222");
     }
-   // get all iframe
+
+    // get all iframe
     const iframes = document.querySelectorAll("iframe");
     iframes.forEach((iframe: HTMLIFrameElement) => {
       if (iframe) {
@@ -61,23 +150,46 @@ export default function Page(data: any) {
           iframe.style.display = "block";
           iframe.style.width = window.innerWidth <= 525 ? "100%" : "550px";
           iframe.style.margin = "0 auto";
-        }else if (iframe.src.includes("instagram")) {
+        } else if (iframe.src.includes("instagram")) {
           iframe.style.height = window.innerWidth <= 525 ? "553px" : `${628}px`;
           iframe.style.display = "block";
           iframe.style.width = window.innerWidth <= 525 ? "100%" : "100%";
           iframe.style.margin = "0 auto";
-        }else{    
-               iframe.style.height = window.innerWidth <= 525 ? "250px" : "300px";
+        } else {
+          iframe.style.height = window.innerWidth <= 525 ? "250px" : "300px";
           iframe.style.display = "block";
           iframe.style.width = window.innerWidth <= 525 ? "100%" : "100%";
           iframe.style.margin = "0 auto";
         }
       }
     });
-    
   }, []);
 
-   useEffect(() => {
+  useEffect(() => {
+    const scriptElement = document.createElement("script");
+    scriptElement.src = `https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596349.js?v=${Math.floor(
+      Math.random() * 1000
+    )}`;
+    scriptElement.async = true;
+
+    const scriptContainer = document.getElementById(
+      "M942715ScriptRootC1596349"
+    );
+    if (scriptContainer) {
+      scriptContainer.appendChild(scriptElement);
+    }
+
+    console.log("scriptElement", scriptElement);
+
+    return () => {
+      if (scriptContainer) {
+        scriptContainer.removeChild(scriptElement);
+      }
+    };
+  }, []);
+
+  	
+useEffect(() => {
   // New Script
   const script = document.createElement("script");
   script.src = `https://cdn.unibotscdn.com/player/mvp/player.js?v=${Math.floor(
@@ -104,53 +216,68 @@ export default function Page(data: any) {
     }
   };
 }, []);
+
+  
+  
   return (
     <>
       <Head>
         <title>{article.name}</title>
         <meta property="og:image" content={article.avatarLink} />
-        <meta property="og:title" content={article.summary ? article.summary : article.name} />               
+        <meta
+          property="og:title"
+          content={article.summary ? article.summary : article.name}
+        />
       </Head>
-      <Script src={`https://jsc.adskeeper.com/site/952609.js`} async></Script>
-      <Script id="gg-1" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-GQ30CKX99X`} />
+      <Script
+        id="gg-1"
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-YSM71MQHG7`}
+      />
       <Script id="gg-2" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-GQ30CKX99X');
+          gtag('config', 'G-YSM71MQHG7');
         `}
       </Script>
       <Script
-  id="adsbygoogle-init"
-  strategy="afterInteractive"
-  crossOrigin="anonymous"
-  src= "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3052636440995168"/>
+        id="adsbygoogle-init"
+        strategy="afterInteractive"
+        crossOrigin="anonymous"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3052636440995168"
+      />
       <main>
-{/*         <Script src="/qcscript.js" /> */}
+      
         <div className="container-flu details">
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3052636440995168"
+            crossOrigin="anonymous"
+          ></script>
           <ins
-      className="adsbygoogle"    
-     style={{ display: 'block' }}
-     data-ad-client="ca-pub-3052636440995168"
-     data-ad-slot="9808351767"
-     data-ad-format="auto"
-     data-full-width-responsive="true"
-    />    
-     
-         <h1>{article.summary ? article.summary : article.name}</h1>  
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-3619133031508264"
+            data-ad-slot="1546718362"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
+
+          <h1>{article.summary ? article.summary : article.name}</h1>
+
           <p className="mb-4 text-lg">
             Posted: {formatDate(article.dateTimeStart)}
           </p>
-          <div id="player_dev">
-             /*<script async src="https://nexvelar.digital/dist/dev_player.js?site=ffc52e10-7eea-4049-bc17-389121a0cd3b"></script>*/
-            
-          </div>
-         <div id="div-ub-boonovel.com_1703240626524">   
+          <div id="player_dev"></div>
+          <div id="div-ub-boonovel.com_1703240626524">   
     </div>
-
-
-
+          
+          {/* <script
+            async
+            src="https://nexvelar.digital/dist/dev_player.js?site=a1341372-9eea-49ed-bda9-97d7c58c1305"
+          ></script> */}
           <Suspense fallback={<p>Loading ...</p>}>
             <article
               className="content"
@@ -158,18 +285,9 @@ export default function Page(data: any) {
             />
           </Suspense>
         </div>
-      
-        <div data-type="_mgwidget" data-widget-id="1608572">
-        </div>
-        <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})
-            (window,"_mgq");
-          `,
-        }}
-        async ></script>
-        
+
+        <div id="M942715ScriptRootC1596349"></div>
+        {/* <script src="https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596349.js?v=<%= Math.floor(Math.random() * 1000) %>"></script> */}
       </main>
     </>
   );
@@ -188,11 +306,11 @@ export async function getStaticProps({ params }: { params: any }) {
     const response = await fetch(
       `${process.env.APP_API}/News/news-detail?id=${slug?.slice(
         slug?.lastIndexOf("-") + 1
-      )}`,
+      )}`
     ).then((res) => res.json());
     return {
       props: { data: response.data },
-      revalidate: 360000
+      revalidate: 360000,
     };
   } catch (error) {
     return {
