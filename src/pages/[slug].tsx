@@ -5,7 +5,6 @@ const formatDate = (str: string) => {
   const date = new Date(str);
   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 };
-
 import { useEffect } from "react";
 
 export default function Page(data: any) {
