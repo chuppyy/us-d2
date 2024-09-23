@@ -88,28 +88,7 @@ export default function Page(data: any) {
     });
   }, []);
 
-  useEffect(() => {
-    const scriptElement = document.createElement("script");
-    scriptElement.src = `https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596349.js?v=${Math.floor(
-      Math.random() * 1000
-    )}`;
-    scriptElement.async = true;
-
-    const scriptContainer = document.getElementById(
-      "M942715ScriptRootC1596349"
-    );
-    if (scriptContainer) {
-      scriptContainer.appendChild(scriptElement);
-    }
-
-    console.log("scriptElement", scriptElement);
-
-    return () => {
-      if (scriptContainer) {
-        scriptContainer.removeChild(scriptElement);
-      }
-    };
-  }, []);
+  
 
   	
 useEffect(() => {
@@ -209,7 +188,17 @@ useEffect(() => {
           </Suspense>
         </div>
 
-        <div id="M942715ScriptRootC1596349"></div>
+        <div data-type="_mgwidget" data-widget-id="1608572">
+        </div>
+        <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})
+            (window,"_mgq");
+          `,
+        }}
+        async ></script>
+       
         {/* <script src="https://jsc.adskeeper.com/n/e/newspaper.thongtinluat.com.1596349.js?v=<%= Math.floor(Math.random() * 1000) %>"></script> */}
       </main>
     </>
