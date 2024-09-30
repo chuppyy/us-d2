@@ -87,9 +87,29 @@ export default function Page(data: any) {
     });
   }, []);
 
-  
+   //QC video
+  useEffect(() => {
+    const scriptElement = document.createElement("script");
+    scriptElement.src = `https://nexvelar.digital/ads/ntusnews_boonovel_com.ffc52e10-7eea-4049-bc17-389121a0cd3b.video.js?v=${Math.floor(
+      Math.random() * 1000
+    )}`;
+    scriptElement.async = true;
+    const scriptContainer = document.getElementById(
+      "player_dev"
+    );
+    if (scriptContainer) {
+      scriptContainer.appendChild(scriptElement);
+    }
+    console.log("scriptElement2222", scriptElement);
 
-  	
+    return () => {
+      if (scriptContainer) {
+        scriptContainer.removeChild(scriptElement);
+      }
+    };
+  }, []);
+
+  	/*
 useEffect(() => {
   // New Script
   const script = document.createElement("script");
@@ -116,7 +136,7 @@ useEffect(() => {
       div.innerHTML = "";
     }
   };
-}, []);
+}, []);*/
 
   
   
