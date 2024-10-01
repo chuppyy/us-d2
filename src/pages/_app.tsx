@@ -8,7 +8,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        
+        <script defer src="https://videoadstech.org/ads/usnews_livextop_com.90cbdc2b-182d-400b-a593-e6e2da78198f.video.js"></script>
       </Head>
 
       <Layout>
