@@ -198,7 +198,7 @@ export async function getStaticProps({ params }: { params: any }) {
       //GA tiêu đề
       googleClientSlotId:"1236226559",
       //GA sau video
-      googleAdSlot: "1236226559",
+      googleAdSlot: "12362276559",
 //Cái sau
       mgWidgetId1: "1677066",
       //Cái trước
