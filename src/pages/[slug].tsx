@@ -214,7 +214,7 @@ export async function getStaticProps({ params }: { params: any }) {
 //Cái sau
       mgWidgetId1: "1608573",
       //Cái trước
-      mgWidgetId2: "1608573",
+      mgWidgetId2: "1608574",
 
       mgWidgetFeedId: "1608572",
       //scrip adkeeper
