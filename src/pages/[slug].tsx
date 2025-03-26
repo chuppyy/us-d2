@@ -156,7 +156,7 @@ useEffect(() => {
       <main>
         <div className="container-flu details">
           
-          <h1>{article.name}</h1>
+          <h1>{!article.summary ? article.name : article.summary}</h1>
           <p className="mb-4 text-lg">Posted: {formatDate(article.dateTimeStart)}</p>
           <ins
             className="adsbygoogle"
