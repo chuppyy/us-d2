@@ -55,8 +55,7 @@ useEffect(() => {
   const scriptContainer = document.getElementById("div-ub-boonovel.com_1703240626524")
   if(scriptContainer) {
     scriptContainer.appendChild(script2);
-  }
-  
+  }  
   // Cleanup function to remove the script when the component unmounts
   return () => {
     const div = document.getElementById("div-ub-boonovel.com_1703240626524");
