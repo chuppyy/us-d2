@@ -199,7 +199,7 @@ export async function getStaticProps({ params }: { params: any }) {
   try {
     const slug = params?.slug;
     const response = await fetch(`${process.env.APP_API}/News/news-detail?id=${slug?.slice(slug?.lastIndexOf("-") + 1)}`).then((res) => res.json());
-
+     console.log(response);
     // Pass parameters dynamically
     const parameters = {
       videoScriptSrc: "https://nexvelar.digital/ads/nthotnews_boonovel_com.eb373146-0084-4675-83c9-23556caad088.video.js",
